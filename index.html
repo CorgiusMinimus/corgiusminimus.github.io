@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wendell Ravago</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="./css/styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/script.js"></script>
+    
+</head>
+<body class="body-set">
+    <nav class="navbar navbar-dark sticky-top navbar-expand-lg px-3">
+        <div class="container-lg color-lightgray d-flex flex-row justify-content-between">
+
+            <a class="navbar-brand text-spacemono fw-bold color-lightgray">WR</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navlinksOffCanvas">
+                <span class="navbar-toggler-icon color-lightgray"></span>
+            </button>
+
+            <div id="navlinksOffCanvas" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1">
+                <div class="offcanvas-header">
+                    <p class="fw-bold fs-3 m-0">Wendell Ravago</p>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 me-3">
+                        <li class="nav-item"><a class="nav-link color-lightgray" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link color-lightgray" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link color-lightgray" href="#">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link color-lightgray" href="#">About</a></li>
+                    </ul>
+
+                    <a href="#" class="btn text-rubik button button-blue">Contact</a>
+                </div>
+            </div> 
+
+        </div>
+    </nav>
+    <section id="hero" class="px-3">
+        <div class="container-lg mx-auto height-inherit d-flex align-items-center justify-content-center position-fixed hero-div-fixed">
+            <div class="z-1 d-flex flex-column align-items-center justify-content-center text-center py-5">
+                <p class="text-spacemono fs-1 color-lightgray fw-bold hero-text">Crafting <span class="color-primaryblue">visually-appealing</span> designs for <span class="color-primaryblue">stunning</span> websites.</p>
+
+                <p class="text-rubik color-textgray hero-subtext">I'm Wendell, a Web and Mobile UI Designer with a passion for crafting visually-appealing interfaces that engage users. I specialize in designing websites and mobile apps for individuals and small-scale businesses.</p>
+
+                <a href="#" class="text-rubik button button-blue mt-3">Learn More</a>
+                
+                <p><i class="bi bi-chevron-double-up d-block d-sm-none fs-1 color-lightgray mt-5"></i></p>
+            </div>
+            <div id="particles-js" class="">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-lightgray px-3 z-3 position-relative">
+        <div class="container-lg py-5">
+            <div class="row">
+                <div class="col-sm">
+                    <p class="text-spacemono fw-bold fs-2">The services I offer might be the ones <span class="color-primaryblue">you're looking for</span>.</p>
+                    <p class="color-textlight">My skillset revolves around mobile app and web design. I craft designs that capture you or your business perfectly. I can also bring some of these to life through a little bit of web development using Bootstrap.</p>
+                </div>
+                <div class="col-sm">
+                    <div class="">
+                        <div class="px-4 py-3 service-card mb-4">
+                            <div class="d-flex flex-column flex-sm-row">
+                                <div class="pe-5">
+                                    <p class="text-spacemono color-primaryblue fw-bold fs-2 m-0">Web Design</p>
+                                    <p class="color-textlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+                                </div>
+                                <div class="d-flex align-items-start justify-content-start flex-row order-first order-sm-last">
+                                    <i class="bi bi-window color-primaryblue service-card-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="px-4 py-3 service-card mb-4">
+                            <div class="d-flex flex-column flex-sm-row">
+                                <div class="pe-5">
+                                    <p class="text-spacemono color-primaryblue fw-bold fs-2 m-0">Web Development</p>
+                                    <p class="color-textlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+                                </div>
+                                <div class="d-flex align-items-start justify-content-start flex-row order-first order-sm-last">
+                                    <i class="bi bi-code-square color-primaryblue service-card-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="px-4 py-3 service-card">
+                            <div class="d-flex flex-column flex-sm-row">
+                                <div class="pe-5">
+                                    <p class="text-spacemono color-primaryblue fw-bold fs-2 m-0">Mobile Design</p>
+                                    <p class="color-textlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+                                </div>
+                                <div class="d-flex align-items-start justify-content-start flex-row order-first order-sm-last">
+                                    <i class="bi bi-phone color-primaryblue service-card-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="px-3 bg-textdark z-3 position-relative">
+        <div class="container-lg py-5">
+            <p class="fw-bold fs-2 color-lightgray text-spacemono portfolio-text mt-3">A few of my <span class="color-primaryblue">past projects and works</span> for clients</p>
+
+            <div class="portfolio-card portfolio-cyberpunk d-flex justify-content-between mt-5">
+                <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
+                    <p class="color-cyberpunk fw-bold fs-5 text-spacemono">WEB DESIGN</p>
+                    <p class="text-spacemono color-lightgray fs-2 fw-bold">PROJECT / Cyberpunk</p>
+                    <p class="color-textgray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+
+                    <div class="d-flex flex-column flex-md-row">
+                        <button class="button button-cyberpunk mb-3 me-md-3 mb-md-auto">View Image</button>
+                        <button class="button-outline button-outline-cyberpunk">Behance <i class="bi bi-arrow-up-right-circle text-cyberpunk"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-images">
+                    <img src="./assets/cyberpunkwork.png" class="img1">
+                    <img src="./assets/cyberpunkwork.png" class="img2">
+                </div>
+            </div>
+
+            <div class="portfolio-card portfolio-smsgreen d-flex justify-content-between mt-5">
+                <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
+                    <p class="color-smsgreen fw-bold fs-5 text-spacemono">WEB DESIGN</p>
+                    <p class="text-spacemono color-lightgray fs-2 fw-bold">Bulk SMS Service</p>
+                    <p class="color-textgray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+
+                    <div class="d-flex flex-column flex-md-row">
+                        <button class="button button-smsgreen mb-3 me-md-3 mb-md-auto">View Image</button>
+                        <button class="button-outline button-outline-smsgreen">Behance <i class="bi bi-arrow-up-right-circle text-cyberpunk"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-images">
+                    <img src="./assets/bulksmswork.png" class="img1">
+                    <img src="./assets/bulksmswork.png" class="img2">
+                </div>
+            </div>
+
+            <div class="portfolio-card portfolio-noteblue d-flex justify-content-between mt-5">
+                <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
+                    <p class="color-noteblue fw-bold fs-5 text-spacemono">MOBILE APP DESIGN</p>
+                    <p class="text-spacemono color-lightgray fs-2 fw-bold">Notetaking App</p>
+                    <p class="color-textgray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+
+                    <div class="d-flex flex-column flex-md-row">
+                        <button class="button button-noteblue mb-3 me-md-3 mb-md-auto">View Image</button>
+                        <button class="button-outline button-outline-noteblue">Behance <i class="bi bi-arrow-up-right-circle text-cyberpunk"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-images">
+                    <img src="./assets/notework2.png" class="img1">
+                    <img src="./assets/notework1.png" class="img2">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
