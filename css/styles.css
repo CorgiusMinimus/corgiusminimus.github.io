@@ -354,6 +354,25 @@ body {
     box-shadow: 0px 0px 25px rgba(0, 123, 255, 0.75);
 }
 
+#about {
+    height: 1500px;
+}
+
+.about-card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+   
+}
+
+.about-card img {
+    width: 2rem;
+    filter: none;
+    transition: filter .4s;
+}
+
+.about-card:hover img {
+}
+
 
 @media screen and (max-width: 576px){
     #hero {
