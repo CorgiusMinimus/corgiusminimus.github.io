@@ -9,3 +9,17 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('bg-textdark');
     }
 })
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('about-mask-animation');
+            return;
+        }
+
+        entry.target.classList.remove('about-mask-animation');
+
+    })
+})
+
+observer.observe(document.getElementById('about-mask'));

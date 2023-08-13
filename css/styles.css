@@ -407,9 +407,6 @@ body {
     transition: filter .4s ease-in-out;
 }
 
-.about-card:hover img {
-}
-
 .ai-card img {
     width: 1.5rem;
 }
@@ -420,6 +417,39 @@ body {
 
 .about-card:hover {
     box-shadow: 0px 0px 15px rgba(56, 136, 255, 0.5);
+}
+
+.about-img-div {
+    margin-top: 5rem;
+}
+
+.about-circle {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(180deg, #3888FF 0%, #181818 100%);
+    transition: .4s background;
+}
+
+.about-mask {
+    mask: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 80%);
+    mask-clip: no-clip;
+    width: 400px;
+    height: 500px;
+    transform: translateY(-10%);
+}   
+
+.about-mask-animation {
+    animation: about-img-move .4s 1;
+}
+
+.about-mask img {
+    height: auto;
+    width: 350px;
+}
+
+.about-circle:hover {
+    background: linear-gradient(180deg, #181818 0%, #3888FF 100%);
 }
 
 
@@ -441,5 +471,16 @@ body {
     .portfolio-card {
         max-height: unset;
         height: auto;
+    }
+}
+
+/* Animations */
+@keyframes about-img-move {
+     0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-5);
     }
 }
