@@ -440,7 +440,7 @@ body {
 }   
 
 .about-mask-animation {
-    animation: about-img-move .4s 1;
+    animation: about-img-move .6s 1;
 }
 
 .about-mask img {
@@ -465,7 +465,7 @@ body {
     background-color: dodgerblue;
     z-index: 4;
     left: 15vw;
-    top: 17vh;
+    top: 9vw;
 }
 
 .about-orbiter:hover {
@@ -583,27 +583,27 @@ body {
 
 @keyframes orbit2 {
     0% {
-        transform: rotate(0deg) translateY(13.875rem) rotate(0deg);
+        transform: rotate(0deg) translateY(12vw) rotate(0deg);
     }
     100% {
-        transform: rotate(360deg) translateY(13.875rem) rotate(-360deg);
+        transform: rotate(360deg) translateY(12vw) rotate(-360deg);
     }
 }
 
 @keyframes orbit3 {
     0% {
-        transform: rotate(0deg) translateY(-13.875rem) rotate(0deg);
+        transform: rotate(0deg) translateY(-12vw) rotate(0deg);
     }
     100% {
-        transform: rotate(360deg) translateY(-13.875rem) rotate(-360deg);
+        transform: rotate(360deg) translateY(-12vw) rotate(-360deg);
     }
 }
 
 @keyframes orbit4 {
     0% {
-        transform: rotate(0deg) translateX(-13.875rem) rotate(0deg);
+        transform: rotate(0deg) translateX(-12vw) rotate(0deg);
     }
     100% {
-        transform: rotate(360deg) translateX(-13.875rem) rotate(-360deg);
+        transform: rotate(360deg) translateX(-12vw) rotate(-360deg);
     }
 }
