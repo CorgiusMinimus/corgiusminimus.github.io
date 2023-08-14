@@ -446,11 +446,98 @@ body {
 .about-mask img {
     height: auto;
     width: 350px;
+    z-index: 6;
 }
 
 .about-circle:hover {
     background: linear-gradient(180deg, #181818 0%, #3888FF 100%);
 }
+
+.about-orbiter {
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow .4s ease-in-out, color .4s ease-in-out;
+    background-color: dodgerblue;
+    z-index: 4;
+    left: 15vw;
+    top: 17vh;
+}
+
+.about-orbiter:hover {
+    animation-play-state: paused;
+    color:white;
+}
+
+.orbiter-1 {
+    box-shadow: none;
+    background: linear-gradient(to right, #f12711, #f5af19);
+    animation: orbit1 10s infinite;
+    animation-timing-function: linear;
+    transition: all .4s ease-in-out;
+}
+
+.orbiter-1:hover {
+    box-shadow: 0px 0px 25px rgba(241, 39, 17, 0.75);
+    transform: scale(1.05);
+}
+
+.orbiter-1:hover .about-orbiter {
+    box-shadow: 0px 0px 25px rgba(241, 39, 17, 0.75);
+    transform: scale(1.05);
+    animation-play-state: paused;
+}
+
+
+.orbiter-2 {
+    animation: orbit2 10s infinite;
+    animation-timing-function: linear;
+    box-shadow: none;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.orbiter-2:hover {
+    color:white;
+    box-shadow: 0px 0px 25px rgba(142, 45, 226, 0.75);
+    transform: scale(1.05);
+}
+
+.orbiter-3 {
+    animation: orbit3 10s infinite;
+    animation-timing-function: linear;
+    box-shadow: none;
+    background: linear-gradient(to right, #11998e, #38ef7d);
+}
+
+.orbiter-3:hover {
+    color:white;
+    box-shadow: 0px 0px 25px rgba(17, 153, 142, 0.75);
+    transform: scale(1.05);
+}
+
+.orbiter-4 {
+    animation: orbit4 10s infinite;
+    animation-timing-function: linear;
+    box-shadow: none;
+    background: linear-gradient(to right, #d1913c, #ffd194);
+}
+
+.orbiter-4:hover {
+    color:white;
+    box-shadow: 0px 0px 25px rgba(209, 145, 60, 0.75);
+    transform: scale(1.05);
+}
+
+.about-info {
+    z-index: 5;
+}
+
+
+
 
 
 @media screen and (max-width: 576px){
@@ -482,5 +569,41 @@ body {
 
     50% {
         transform: translateY(-5);
+    }
+}
+
+@keyframes orbit1 {
+    0% {
+        transform: rotate(0deg) translateX(12vw) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(12vw) rotate(-360deg);
+    }
+}
+
+@keyframes orbit2 {
+    0% {
+        transform: rotate(0deg) translateY(13.875rem) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateY(13.875rem) rotate(-360deg);
+    }
+}
+
+@keyframes orbit3 {
+    0% {
+        transform: rotate(0deg) translateY(-13.875rem) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateY(-13.875rem) rotate(-360deg);
+    }
+}
+
+@keyframes orbit4 {
+    0% {
+        transform: rotate(0deg) translateX(-13.875rem) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(-13.875rem) rotate(-360deg);
     }
 }
