@@ -47,6 +47,10 @@ body {
     background-color: var(--lightgray);
 }
 
+.bg-textgray {
+    background-color: var(--textgray);
+}
+
 .bg-textdark {
     background-color: var(--textdark);
 }
@@ -65,6 +69,10 @@ body {
 
 .color-textlight {
     color: var(--textlight);
+}
+
+.color-textdark {
+    color: var(--textdark);
 }
 
 .color-cyberpunk {
@@ -387,7 +395,7 @@ body {
 }
 
 #about {
-    height: 1500px;
+    
 }
 
 .about-card {
@@ -537,7 +545,9 @@ body {
 }
 
 
-
+.cta-button {
+    width: 350px
+}
 
 
 @media screen and (max-width: 576px){

@@ -7,14 +7,18 @@
     <link rel="icon" type="image/x-icon" href="./assets/W.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href=" https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css " rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/839e0922ae.js" crossorigin="anonymous"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js "></script>
     <script src="./js/app.js"></script>
     <script src="./js/script.js" defer></script>
     
 </head>
+
 <body class="body-set">
     <nav class="navbar navbar-dark sticky-top navbar-expand-lg px-3">
         <div class="container-lg color-lightgray d-flex flex-row justify-content-between">
@@ -62,7 +66,7 @@
             </div>
         </section>
     
-        <section id="services" class="bg-lightgray px-3 py-5 z-3 position-relative">
+        <!-- <section id="services" class="bg-lightgray px-3 py-5 z-3 position-relative">
             <div class="container-lg py-5">
                 <div class="row">
                     <div class="col-sm">
@@ -110,7 +114,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     
         <section id="portfolio" class="px-3 bg-textdark z-3 position-relative">
             <div class="container-lg py-5">
@@ -120,10 +124,10 @@
                     <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
                         <p class="color-cyberpunk fw-bold fs-5 text-spacemono">WEB DESIGN</p>
                         <p class="text-spacemono color-lightgray fs-2 fw-bold">PROJECT / Cyberpunk</p>
-                        <p class="color-textgray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+                        <p class="color-textgray">A variation of a website design for a client from a League of Legends Account Boosting Shop.</p>
     
-                        <div class="d-flex flex-column flex-md-row">
-                            <button class="button button-cyberpunk mb-3 me-md-3 mb-md-auto">View Image</button>
+                        <div class="d-flex flex-column flex-md-row" id="cyberpunk-gallery">
+                            <a class="button button-cyberpunk mb-3 me-md-3 mb-md-auto" href="./assets/cyberpunk_full.png" target="_blank">View Image</a>
                             <a href="https://www.behance.net/gallery/156495259/LoL-Account-Shop-Landing-Page-Design" target="_blank" class="button-outline button-outline-cyberpunk">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
                         </div>
                     </div>
@@ -137,11 +141,10 @@
                     <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
                         <p class="color-smsgreen fw-bold fs-5 text-spacemono">WEB DESIGN</p>
                         <p class="text-spacemono color-lightgray fs-2 fw-bold">Bulk SMS Service</p>
-                        <p class="color-textgray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+                        <p class="color-textgray">Website design for a client focusing on providing international SMS services.</p>
     
                         <div class="d-flex flex-column flex-md-row">
-                            <button class="button button-smsgreen mb-3 me-md-3 mb-md-auto">View Image</button>
-                            
+                            <a class="button button-smsgreen mb-3 me-md-3 mb-md-auto" href="./assets/smssite_full.png" target="_blank">View Image</a>
                         </div>
                     </div>
                     <div class="portfolio-images">
@@ -154,11 +157,10 @@
                     <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
                         <p class="color-noteblue fw-bold fs-5 text-spacemono">MOBILE APP DESIGN</p>
                         <p class="text-spacemono color-lightgray fs-2 fw-bold">Notetaking App</p>
-                        <p class="color-textgray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
+                        <p class="color-textgray">UI Design for an Android Note-taking App for an academic project in Mobile Application Development</p>
     
                         <div class="d-flex flex-column flex-md-row">
-                            <button class="button button-noteblue mb-3 me-md-3 mb-md-auto">View Image</button>
-                            <a href="https://www.behance.net/gallery/173873463/NotaKo-Simple-Notetaking-App" target="_blank" class="button-outline button-outline-noteblue">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
+                            <a href="https://www.behance.net/gallery/173873463/NotaKo-Simple-Notetaking-App" target="_blank" class="button button-noteblue">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
                         </div>
                     </div>
                     <div class="portfolio-images">
@@ -174,16 +176,16 @@
                 <div class="row d-flex flex-row align-items-center">
                     <div class="col-md">
                         <div class="position-relative d-flex justify-content-center about-img-div" id="about-img-div">
-                            <div class="position-absolute about-orbiter orbiter-1 p-3" data-bs-toggle="tooltip" data-bs-title="Pizza is my favorite food!">
+                            <div class="position-absolute about-orbiter orbiter-1 p-3 d-none d-xxl-block" data-bs-toggle="tooltip" data-bs-title="Pizza is my favorite food!">
                                 <p class="m-0 fs-5"><i class="fa-solid fa-pizza-slice"></i></p>
                             </div>
-                            <div class="position-absolute about-orbiter orbiter-2 p-3" data-bs-toggle="tooltip" data-bs-title="I am a dog person!">
+                            <div class="position-absolute about-orbiter orbiter-2 p-3 d-none d-xxl-block" data-bs-toggle="tooltip" data-bs-title="I am a dog person!">
                                 <p class="m-0 fs-5"><i class="fa-solid fa-dog"></i></p>
                             </div>
-                            <div class="position-absolute about-orbiter orbiter-3 p-3" data-bs-toggle="tooltip" data-bs-title="My favorite bands are Arctic Monkeys, twenty one pilots, and Siames! ">
+                            <div class="position-absolute about-orbiter orbiter-3 p-3 d-none d-xxl-block" data-bs-toggle="tooltip" data-bs-title="My favorite bands are Arctic Monkeys, twenty one pilots, and Siames! ">
                                 <p class="m-0 fs-5"><i class="fa-solid fa-music"></i></p>
                             </div>
-                            <div class="position-absolute about-orbiter orbiter-4 p-3" data-bs-toggle="tooltip" data-bs-title="Coffee runs in my veins.">
+                            <div class="position-absolute about-orbiter orbiter-4 p-3 d-none d-xxl-block" data-bs-toggle="tooltip" data-bs-title="Coffee runs in my veins.">
                                 <p class="m-0 fs-5"><i class="fa-solid fa-mug-hot"></i></p>
                             </div>
                             <div class="about-mask position-absolute d-flex align-items-center justify-content-center" id="about-mask">
@@ -193,17 +195,13 @@
                         </div>
                     </div>
                     <div class="col-md about-info">
-                        <p class="color-primaryblue fs-2 fw-bold text-spacemono">I'm Wendell!</p>
+                        <p class="color-primaryblue fs-2 fw-bold text-spacemono mt-5 mt-md-0 text-center text-md-start">I'm Wendell!</p>
                         <p class="color-textlight">
-                            I am a Filipino freelance Web and Mobile UI Designer. I have been the graphic designer of various school clubs in the past but I have always felt that Web Design and UI was my niche, so I started practicing and explored different ways to design interfaces and websites. I also develop websites (usually the ones I design) with Bootstrap.
+                            I am a Filipino freelance Web and Mobile UI Designer. I have been the graphic designer of various school clubs in the past but I have always felt that Web Design and UI was my niche, so I started practicing and explored different ways to design interfaces and websites. I also develop websites (usually the ones I design) with Bootstrap, and if the website is big enough, Angular.
                         </p>
                         <p class="color-textlight">
                             Outside of design and code, I love food and enjoy eating with friends and family. I play video games, mainly Tekken 7, DotA 2, and League of Legends. I also play Yu-Gi-Oh! and enjoy spending money on what is essentially just shiny cardboard.<sup>nerd...</sup>
                         </p> 
-
-                        <p class="color-textlight">
-                            Oh and by the way, you can also hover (or touch, if you're on mobile) above the floating colored tiles for some fun facts about me!
-                        </p>
                         <div class="row mt-5">
                             <div class="col">
                                 <p class="text-spacemono color-primaryblue fs-3 fw-bold">
@@ -244,6 +242,23 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="cta" class="p-5 bg-lightgray position-relative">
+            <div class="p-5 bg-textdark container-lg rounded-2 text-center d-flex flex-column align-items-center">
+                <p class="color-lightgray text-spacemono fs-2 fw-bold">Let's Work Together!</p>
+                <p class="color-lightgray">Need a website design? Need a website developed? <br>Hit me with an email and let's have a chat!</p>
+                <a href="mailto:wendellravago@gmail.com" class="button button-blue mt-3 cta-button">Email</a>
+            </div>
+        </section>
+        <section id="footer" class="p-3 bg-textgray position-relative">
+            <div class="container-lg d-flex flex-column align-items-center">
+                <div class="d-flex justify-content-center mb-2">
+                    <a href="https://www.behance.net/wendellravago" class="text-decoration-none text-reset color-textdark me-3"><i class="bi bi-behance fs-5"></i></a>
+                    <a href="https://www.linkedin.com/in/wendell-ravago/" class="text-decoration-none text-reset color-textdark"><i class="bi bi-linkedin fs-5"></i></a>
+                </div>
+                <p class="m-0">Copyright © 2024 Wendell Ravago. All rights reserved.</p>
             </div>
         </section>
     </main>

@@ -26,3 +26,5 @@ const observer = new IntersectionObserver(entries => {
 })
 
 observer.observe(document.getElementById('about-mask'));
+
+// load galleries
