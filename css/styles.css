@@ -135,6 +135,10 @@ body {
     color: var(--primaryblue)
 }
 
+.site-content {
+    position: relative;
+}
+
 #hero {
     height: 100vh;
 }
@@ -158,6 +162,13 @@ body {
     animation: move-down 1s infinite ease-in-out;
 }
 
+.sticky-p {
+    position: sticky;
+    top: 5%;
+}
+
+.portfolio-container {
+}
 
 
 .button {

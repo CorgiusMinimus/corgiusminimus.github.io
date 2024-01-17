@@ -37,12 +37,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 me-3">
                         <li class="nav-item"><a class="nav-link color-lightgray" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link color-lightgray" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link color-lightgray" href="#">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link color-lightgray" href="#">About</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link color-lightgray" href="#services">Services</a></li> -->
+                        <li class="nav-item"><a class="nav-link color-lightgray" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link color-lightgray" href="#cta">About</a></li>
                     </ul>
-
-                    <a href="#" class="btn text-rubik button button-blue">Contact</a>
                 </div>
             </div> 
 
@@ -52,13 +50,17 @@
         <section id="hero" class="px-3">
             <div class="container-lg mx-auto height-inherit d-flex align-items-center justify-content-center position-fixed hero-div-fixed">
                 <div class="z-1 d-flex flex-column align-items-center justify-content-center text-center py-5">
-                    <p class="text-spacemono fs-1 color-lightgray fw-bold hero-text">Crafting <span class="color-primaryblue">visually-appealing</span> designs for <span class="color-primaryblue">stunning</span> websites.</p>
+                    <p class="text-spacemono fs-1 color-lightgray fw-bold hero-text">Hello!👋</p>
+
+                    <p class="text-spacemono fs-1 color-lightgray fw-bold hero-text">I'm <span class="color-primaryblue">Wendell Lance</span>!</p>
+
+                    <p class="text-rubik color-textgray hero-subtext m-0">Aspiring UI/UX Designer and Front-End Developer on the lookout to improve my craft! I enjoy experimenting with stuff to see what works and what doesn't. </p>
+
+                    <p class="text-rubik color-textgray hero-subtext">Oh, I also love food and playing video games!</p>
     
-                    <p class="text-rubik color-textgray hero-subtext">I'm Wendell, a Web and Mobile UI Designer with a passion for crafting visually-appealing interfaces that engage users. I specialize in designing websites and mobile apps for individuals and small-scale businesses.</p>
-    
-                    <a href="#services" class="text-rubik button button-blue mt-3 mb-5">Learn More</a>
+                    <a href="#portfolio" class="text-rubik button button-blue mt-3 mb-5">Learn More</a>
                     
-                    <a href="#services" class="mt-5 text-reset d-block"><i class="bi bi-arrow-down-circle d-block fs-1 color-lightgray down-arrow"></i></a>
+                    <a href="#portfolio" class="mt-5 text-reset d-block"><i class="bi bi-arrow-down-circle d-block fs-1 color-lightgray down-arrow"></i></a>
                 </div>
                 <div id="particles-js" class="">
                     
@@ -117,57 +119,60 @@
         </section> -->
     
         <section id="portfolio" class="px-3 bg-textdark z-3 position-relative">
-            <div class="container-lg py-5">
-                <p class="fw-bold fs-2 color-lightgray text-spacemono portfolio-text mt-3">A few of my <span class="color-primaryblue">past projects and works</span> for clients</p>
-    
-                <div class="portfolio-card portfolio-cyberpunk d-flex justify-content-between mt-5">
-                    <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
-                        <p class="color-cyberpunk fw-bold fs-5 text-spacemono">WEB DESIGN</p>
-                        <p class="text-spacemono color-lightgray fs-2 fw-bold">PROJECT / Cyberpunk</p>
-                        <p class="color-textgray">A variation of a website design for a client from a League of Legends Account Boosting Shop.</p>
-    
-                        <div class="d-flex flex-column flex-md-row" id="cyberpunk-gallery">
-                            <a class="button button-cyberpunk mb-3 me-md-3 mb-md-auto" href="./assets/cyberpunk_full.png" target="_blank">View Image</a>
-                            <a href="https://www.behance.net/gallery/156495259/LoL-Account-Shop-Landing-Page-Design" target="_blank" class="button-outline button-outline-cyberpunk">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
+            <div class="container-lg py-5 position-relative">
+                <div class="w-100 fw-bold fs-2 bg-textdark  color-lightgray text-spacemono my-3"><p class="portfolio-text ">A few of my <span class="color-primaryblue">past projects and works</span> for clients</p></div>
+
+                <div class="portfolio-container">
+                    <div class="portfolio-card portfolio-cyberpunk d-flex justify-content-between mt-5">
+                        <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
+                            <p class="color-cyberpunk fw-bold fs-5 text-spacemono">WEB DESIGN</p>
+                            <p class="text-spacemono color-lightgray fs-2 fw-bold">PROJECT / Cyberpunk</p>
+                            <p class="color-textgray">A variation of a website design for a client from a League of Legends Account Boosting Shop.</p>
+        
+                            <div class="d-flex flex-column flex-md-row" id="cyberpunk-gallery">
+                                <a class="button button-cyberpunk mb-3 me-md-3 mb-md-auto" href="./assets/cyberpunk_full.png" target="_blank">View Image</a>
+                                <a href="https://www.behance.net/gallery/156495259/LoL-Account-Shop-Landing-Page-Design" target="_blank" class="button-outline button-outline-cyberpunk">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-images">
+                            <img src="./assets/cyberpunkwork.png" class="img1">
+                            <img src="./assets/cyberpunkwork.png" class="img2">
                         </div>
                     </div>
-                    <div class="portfolio-images">
-                        <img src="./assets/cyberpunkwork.png" class="img1">
-                        <img src="./assets/cyberpunkwork.png" class="img2">
-                    </div>
-                </div>
-    
-                <div class="portfolio-card portfolio-smsgreen d-flex justify-content-between mt-5">
-                    <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
-                        <p class="color-smsgreen fw-bold fs-5 text-spacemono">WEB DESIGN</p>
-                        <p class="text-spacemono color-lightgray fs-2 fw-bold">Bulk SMS Service</p>
-                        <p class="color-textgray">Website design for a client focusing on providing international SMS services.</p>
-    
-                        <div class="d-flex flex-column flex-md-row">
-                            <a class="button button-smsgreen mb-3 me-md-3 mb-md-auto" href="./assets/smssite_full.png" target="_blank">View Image</a>
+        
+                    <div class="portfolio-card portfolio-smsgreen d-flex justify-content-between mt-5">
+                        <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
+                            <p class="color-smsgreen fw-bold fs-5 text-spacemono">WEB DESIGN</p>
+                            <p class="text-spacemono color-lightgray fs-2 fw-bold">Bulk SMS Service</p>
+                            <p class="color-textgray">Website design for a client focusing on providing international SMS services.</p>
+        
+                            <div class="d-flex flex-column flex-md-row">
+                                <a class="button button-smsgreen mb-3 me-md-3 mb-md-auto" href="./assets/smssite_full.png" target="_blank">View Image</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-images">
+                            <img src="./assets/bulksmswork.png" class="img1">
+                            <img src="./assets/bulksmswork.png" class="img2">
                         </div>
                     </div>
-                    <div class="portfolio-images">
-                        <img src="./assets/bulksmswork.png" class="img1">
-                        <img src="./assets/bulksmswork.png" class="img2">
-                    </div>
-                </div>
-    
-                <div class="portfolio-card portfolio-noteblue d-flex justify-content-between mt-5">
-                    <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
-                        <p class="color-noteblue fw-bold fs-5 text-spacemono">MOBILE APP DESIGN</p>
-                        <p class="text-spacemono color-lightgray fs-2 fw-bold">Notetaking App</p>
-                        <p class="color-textgray">UI Design for an Android Note-taking App for an academic project in Mobile Application Development</p>
-    
-                        <div class="d-flex flex-column flex-md-row">
-                            <a href="https://www.behance.net/gallery/173873463/NotaKo-Simple-Notetaking-App" target="_blank" class="button button-noteblue">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
+        
+                    <div class="portfolio-card portfolio-noteblue d-flex justify-content-between mt-5">
+                        <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
+                            <p class="color-noteblue fw-bold fs-5 text-spacemono">MOBILE APP DESIGN</p>
+                            <p class="text-spacemono color-lightgray fs-2 fw-bold">Notetaking App</p>
+                            <p class="color-textgray">UI Design for an Android Note-taking App for an academic project in Mobile Application Development</p>
+        
+                            <div class="d-flex flex-column flex-md-row">
+                                <a href="https://www.behance.net/gallery/173873463/NotaKo-Simple-Notetaking-App" target="_blank" class="button button-noteblue">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-images">
+                            <img src="./assets/notework2.png" class="img1">
+                            <img src="./assets/notework1.png" class="img2">
                         </div>
                     </div>
-                    <div class="portfolio-images">
-                        <img src="./assets/notework2.png" class="img1">
-                        <img src="./assets/notework1.png" class="img2">
-                    </div>
                 </div>
+
             </div>
         </section>
         
@@ -197,62 +202,66 @@
                     <div class="col-md about-info">
                         <p class="color-primaryblue fs-2 fw-bold text-spacemono mt-5 mt-md-0 text-center text-md-start">I'm Wendell!</p>
                         <p class="color-textlight">
-                            I am a Filipino freelance Web and Mobile UI Designer. I have been the graphic designer of various school clubs in the past but I have always felt that Web Design and UI was my niche, so I started practicing and explored different ways to design interfaces and websites. I also develop websites (usually the ones I design) with Bootstrap, and if the website is big enough, Angular.
+                            I am a Filipino aspiring Web and Mobile UI Designer. I have been the graphic designer of various school clubs in the past but I have always felt that Web Design and UI was my niche, so I started practicing and explored different ways to design interfaces and websites. I also develop websites (usually the ones I design) with Bootstrap, and if the website is big enough, Angular.
                         </p>
                         <p class="color-textlight">
-                            Outside of design and code, I love food and enjoy eating with friends and family. I play video games, mainly Tekken 7, DotA 2, and League of Legends. I also play Yu-Gi-Oh! and enjoy spending money on what is essentially just shiny cardboard.<sup>nerd...</sup>
+                            Outside of design and code, I love food and enjoy eating with friends and family. I play video games, mainly Tekken 7. 
                         </p> 
+                        <div class="col mt-5 mt-xxl-0">
+                            <p class="text-spacemono color-primaryblue fs-3 fw-bold">
+                                Development
+                            </p>
+                            <div class="d-flex flex-row">
+                                <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="HTML">
+                                    <img src="./assets/html5.svg" draggable="false">
+                                </div>
+                                <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="CSS">
+                                    <img src="./assets/css3.svg" draggable="false">
+                                </div>
+                                <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="Javascript">
+                                    <img src="./assets/javascript.svg" draggable="false">
+                                </div>
+                                <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="Bootstrap">
+                                    <img src="./assets/bootstrap.svg" draggable="false">
+                                </div>
+                                <div class="about-card p-3" data-bs-toggle="tooltip" data-bs-title="Angular">
+                                    <img src="./assets/angular.svg" draggable="false">
+                                </div>
+                            </div>
+                        </div>
                         <div class="row mt-5">
                             <div class="col">
                                 <p class="text-spacemono color-primaryblue fs-3 fw-bold">
-                                    DESIGN
+                                    Design
                                 </p>
                                 <div class="d-flex flex-row">
-                                    <div class="about-card p-3 me-3 ">
+                                    <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="Figma">
                                         <img src="./assets/figma.svg" draggable="false">
                                     </div>
-                                    <div class="about-card p-3 me-3 ai-card">
+                                    <div class="about-card p-3 me-3 ai-card" data-bs-toggle="tooltip" data-bs-title="Adobe Illustrator">
                                         <img src="./assets/adobe-illustrator.svg" draggable="false">
                                     </div>
-                                    <div class="about-card p-3">
+                                    <div class="about-card p-3" data-bs-toggle="tooltip" data-bs-title="Adobe Photoshop">
                                         <img src="./assets/photoshop.svg" draggable="false">
                                     </div>
                                 </div>
                             </div>
     
-                            <div class="col mt-5 mt-xxl-0">
-                                <p class="text-spacemono color-primaryblue fs-3 fw-bold">
-                                    DEVELOPMENT
-                                </p>
-                                <div class="d-flex flex-row">
-                                    <div class="about-card p-3 me-3">
-                                        <img src="./assets/html5.svg" draggable="false">
-                                    </div>
-                                    <div class="about-card p-3 me-3">
-                                        <img src="./assets/css3.svg" draggable="false">
-                                    </div>
-                                    <div class="about-card p-3 me-3">
-                                        <img src="./assets/javascript.svg" draggable="false">
-                                    </div>
-                                    <div class="about-card p-3">
-                                        <img src="./assets/bootstrap.svg" draggable="false">
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="cta" class="p-5 bg-lightgray position-relative">
+        <section id="cta" class="p-5 bg-lightgray position-relative z-3">
             <div class="p-5 bg-textdark container-lg rounded-2 text-center d-flex flex-column align-items-center">
                 <p class="color-lightgray text-spacemono fs-2 fw-bold">Let's Work Together!</p>
                 <p class="color-lightgray">Need a website design? Need a website developed? <br>Hit me with an email and let's have a chat!</p>
                 <a href="mailto:wendellravago@gmail.com" class="button button-blue mt-3 cta-button">Email</a>
             </div>
         </section>
-        <section id="footer" class="p-3 bg-textgray position-relative">
+        <section id="footer" class="p-3 bg-textgray position-relative z-3">
             <div class="container-lg d-flex flex-column align-items-center">
                 <div class="d-flex justify-content-center mb-2">
                     <a href="https://www.behance.net/wendellravago" class="text-decoration-none text-reset color-textdark me-3"><i class="bi bi-behance fs-5"></i></a>
