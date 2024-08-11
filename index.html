@@ -8,25 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href=" https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css " rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/839e0922ae.js" crossorigin="anonymous"></script>
     <script src=" https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/script.js" defer></script>
     
 </head>
 
-<body class="body-set">
+<body class="bg-thememain">
+    <input id="theme-toggle" type="checkbox" class="d-none">
     <nav class="navbar navbar-dark sticky-top navbar-expand-lg px-3">
-        <div class="container-lg color-lightgray d-flex flex-row justify-content-between">
+        <div class="container-lg color-themetext d-flex flex-row justify-content-between">
 
-            <a class="navbar-brand text-spacemono fw-bold color-lightgray">WR</a>
+            <a class="navbar-brand text-spacemono fw-bold color-themetext">WR</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navlinksOffCanvas">
-                <span class="navbar-toggler-icon color-lightgray"></span>
+                <span class="navbar-toggler-icon color-textlight"></span>
             </button>
 
             <div id="navlinksOffCanvas" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1">
@@ -36,10 +39,10 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 me-3">
-                        <li class="nav-item"><a class="nav-link color-lightgray" href="#">Home</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link color-lightgray" href="#services">Services</a></li> -->
-                        <li class="nav-item"><a class="nav-link color-lightgray" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link color-lightgray" href="#cta">About</a></li>
+                        <li class="nav-item"><a class="nav-link color-themetext" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link color-themetext" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link color-themetext" href="#about">About</a></li>
+                        <li class="nav-item"><label for="theme-toggle" class="color-themetext">Toggle Theme</label></li>
                     </ul>
                 </div>
             </div> 
@@ -47,136 +50,130 @@
         </div>
     </nav>
     <main class="site-content">
-        <section id="hero" class="px-3">
+        <section id="hero" class="px-3 bg-thememain">
+
             <div class="container-lg mx-auto height-inherit d-flex align-items-center justify-content-center position-fixed hero-div-fixed">
-                <div class="z-1 d-flex flex-column align-items-center justify-content-center text-center py-5">
-                    <p class="text-spacemono fs-1 color-lightgray fw-bold hero-text">Hello!👋</p>
-
-                    <p class="text-spacemono fs-1 color-lightgray fw-bold hero-text">I'm <span class="color-primaryblue">Wendell Lance</span>!</p>
-
-                    <p class="text-rubik color-textgray hero-subtext m-0">Aspiring UI/UX Designer and Front-End Developer on the lookout to improve my craft! I enjoy experimenting with stuff to see what works and what doesn't. </p>
-
-                    <p class="text-rubik color-textgray hero-subtext">Oh, I also love food and playing video games!</p>
-    
-                    <a href="#portfolio" class="text-rubik button button-blue mt-3 mb-5">Learn More</a>
-                    
-                    <a href="#portfolio" class="mt-5 text-reset d-block"><i class="bi bi-arrow-down-circle d-block fs-1 color-lightgray down-arrow"></i></a>
-                </div>
-                <div id="particles-js" class="">
-                    
-                </div>
-            </div>
-        </section>
-    
-        <!-- <section id="services" class="bg-lightgray px-3 py-5 z-3 position-relative">
-            <div class="container-lg py-5">
-                <div class="row">
-                    <div class="col-sm">
-                        <p class="text-spacemono fw-bold fs-2">The services I offer might be the ones <span class="color-primaryblue">you're looking for</span>.</p>
-                        <p class="color-textlight">My skillset revolves around mobile app and web design. I craft designs that capture you or your business perfectly. I can also bring some of these to life through a little bit of web development using Bootstrap.</p>
-                    </div>
-                    <div class="col-sm">
-                        <div class="">
-                            <div class="px-4 py-3 service-card mb-4">
-                                <div class="d-flex flex-column flex-sm-row">
-                                    <div class="pe-5">
-                                        <p class="text-spacemono color-primaryblue fw-bold fs-2 m-0">Web Design</p>
-                                        <p class="color-textlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
-                                    </div>
-                                    <div class="d-flex align-items-start justify-content-start flex-row order-first order-sm-last">
-                                        <i class="bi bi-window color-primaryblue service-card-icon"></i>
-                                    </div>
-                                </div>
+                <div class="z-1 d-flex flex-column align-items-center justify-content-center  py-5">
+                    <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start mt-5 mt-md-0">
+                        <div class="d-flex flex-column justify-content-center align-items-center align-items-md-start order-md-2 order-2">
+                            <p class="text-spacemono fs-1 color-themetext fw-bold hero-text mt-3 mt-md-0">Hello!👋</p>
+        
+                            <p class="text-spacemono fs-1 color-themetext  fw-bold hero-text">I'm <span class="color-primaryblue">Wendell Lance</span>!</p>
+        
+                            <p class="text-rubik color-themetextgray hero-subtext m-0 text-center text-md-start">Aspiring UI/UX Designer and Front-End Developer on the lookout to improve my craft! I enjoy experimenting with stuff to see what works and what doesn't. </p>
+        
+                            <p class="text-rubik color-themetextgray hero-subtext">Oh, I also love food and playing video games!</p>
+                            
+                            <div class="d-flex flex-row">
+                                <a href="/assets/files/Ravago-Resume.pdf" target="_blank" class="text-rubik button button-blue mt-3 mb-5">Get Resume</a>
+                                <a href="#portfolio" class="text-rubik button-outline mt-3 mb-5 ms-3">Learn More</a>
+                                
                             </div>
-    
-                            <div class="px-4 py-3 service-card mb-4">
-                                <div class="d-flex flex-column flex-sm-row">
-                                    <div class="pe-5">
-                                        <p class="text-spacemono color-primaryblue fw-bold fs-2 m-0">Web Development</p>
-                                        <p class="color-textlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
-                                    </div>
-                                    <div class="d-flex align-items-start justify-content-start flex-row order-first order-sm-last">
-                                        <i class="bi bi-code-square color-primaryblue service-card-icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="px-4 py-3 service-card">
-                                <div class="d-flex flex-column flex-sm-row">
-                                    <div class="pe-5">
-                                        <p class="text-spacemono color-primaryblue fw-bold fs-2 m-0">Mobile Design</p>
-                                        <p class="color-textlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu tortor, molestie eu volutpat non, tempor ac velit. Sed sed pellentesque lectus.</p>
-                                    </div>
-                                    <div class="d-flex align-items-start justify-content-start flex-row order-first order-sm-last">
-                                        <i class="bi bi-phone color-primaryblue service-card-icon"></i>
-                                    </div>
+
+                            
+                            <div class="w-100">
+                                <p class="text-uppercase text-rubik color-themetextgray text-center text-md-start">You may also reach me on:</p>
+                                <div class="d-flex mb-2 justify-content-center justify-content-md-start">
+                                    <a href="https://www.behance.net/wendellravago" class="text-decoration-none text-reset color-textlight me-5"><i class="bi bi-behance fs-4 color-themetextgray"></i></a>
+                                    <a href="https://www.linkedin.com/in/wendell-ravago/" class="text-decoration-none text-reset color-textlight me-5"><i class="bi bi-linkedin fs-4 color-themetextgray"></i></a>
+                                    <a href="mailto:wendellravago@gmail.com" class="text-decoration-none text-reset color-textlight"><i class="bi bi-envelope-fill fs-4 color-themetextgray"></i></a>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="d-flex ms-0 ms-md-5 hero-img-container overflow-hidden position-relative order-md-2 order-1" id="hero-img-container">
+                            <div class="hero-img-shadow-mask">
+                                <!-- <span id="img-counter"></span> -->
+                            </div>
+                            <div class="d-flex justify-content-center pt-5" id="hero-img-div">
+                                <img src="./assets/creative-transparent.png" >
+                            </div>
+                        </div>
                     </div>
+
+
+                    
+                    <a href="#portfolio" class="mt-5 text-reset d-block"><i class="bi bi-arrow-down-circle d-block fs-1 color-themetextgray down-arrow"></i></a>
                 </div>
+                <div id="particles-js" class=""></div>
             </div>
-        </section> -->
-    
-        <section id="portfolio" class="px-3 bg-textdark z-3 position-relative">
+        </section>
+
+        <section id="portfolio" class="px-3 bg-themeprimarybg z-3 position-relative">
             <div class="container-lg py-5 position-relative">
-                <div class="w-100 fw-bold fs-2 bg-textdark  color-lightgray text-spacemono my-3"><p class="portfolio-text ">A few of my <span class="color-primaryblue">past projects and works</span> for clients</p></div>
+                <div class="w-100 color-lightgray my-3 text-center">
+                    <p class="text-rubik text-uppercase fs-5">My Projects</p>
+                    <p class="fs-3 text-spacemono fw-bold">Some of my personal projects and works for clients</p>
+                </div>
 
                 <div class="portfolio-container">
-                    <div class="portfolio-card portfolio-cyberpunk d-flex justify-content-between mt-5">
+
+                    <div class="portfolio-card d-flex justify-content-between mt-5" data-aos="fade-right">
                         <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
-                            <p class="color-cyberpunk fw-bold fs-5 text-spacemono">WEB DESIGN</p>
-                            <p class="text-spacemono color-lightgray fs-2 fw-bold">PROJECT / Cyberpunk</p>
-                            <p class="color-textgray">A variation of a website design for a client from a League of Legends Account Boosting Shop.</p>
+                            <p class="color-portfoliocard fw-bold fs-5 text-spacemono portfolio-project-type">WEB DESIGN</p>
+                            <p class="text-spacemono color-themetext fs-2 fw-bold">PROJECT / Cyberpunk</p>
+                            <p class="color-themetext">A variation of a website design for a client from a League of Legends Account Boosting Shop.</p>
         
-                            <div class="d-flex flex-column flex-md-row" id="cyberpunk-gallery">
-                                <a class="button button-cyberpunk mb-3 me-md-3 mb-md-auto" href="./assets/cyberpunk_full.png" target="_blank">View Image</a>
-                                <a href="https://www.behance.net/gallery/156495259/LoL-Account-Shop-Landing-Page-Design" target="_blank" class="button-outline button-outline-cyberpunk">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
+                            <div class="d-flex flex-column flex-md-row mt-3" id="cyberpunk-gallery">
+                                <a class="button bg-themeportfoliobutton color-portfoliocard mb-3 me-md-3 mb-md-auto" href="./assets/cyberpunk_full.png" target="_blank">View Image</a>
+                                <a href="https://www.behance.net/gallery/156495259/LoL-Account-Shop-Landing-Page-Design" target="_blank" class="button bg-themeportfoliobutton color-portfoliocard">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-images">
-                            <img src="./assets/cyberpunkwork.png" class="img1">
-                            <img src="./assets/cyberpunkwork.png" class="img2">
+                            <img src="./assets/cyberpunkwork.png" class="w-100 port-img-hover">
                         </div>
                     </div>
-        
-                    <div class="portfolio-card portfolio-smsgreen d-flex justify-content-between mt-5">
+
+                    <div class="portfolio-card d-flex justify-content-between mt-5" data-aos="fade-right">
                         <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
-                            <p class="color-smsgreen fw-bold fs-5 text-spacemono">WEB DESIGN</p>
-                            <p class="text-spacemono color-lightgray fs-2 fw-bold">Bulk SMS Service</p>
-                            <p class="color-textgray">Website design for a client focusing on providing international SMS services.</p>
+                            <p class="color-portfoliocard fw-bold fs-5 text-spacemono portfolio-project-type">WEB DESIGN</p>
+                            <p class="text-spacemono color-themetext fs-2 fw-bold">Bulk SMS Service</p>
+                            <p class="color-themetext">Website design for a client focusing on providing international SMS services.</p>
         
-                            <div class="d-flex flex-column flex-md-row">
-                                <a class="button button-smsgreen mb-3 me-md-3 mb-md-auto" href="./assets/smssite_full.png" target="_blank">View Image</a>
+                            <div class="d-flex flex-column flex-md-row mt-3" id="cyberpunk-gallery">
+                                <a class="button bg-themeportfoliobutton color-portfoliocard mb-3 me-md-3 mb-md-auto" href="./assets/smssite_full.png" target="_blank">View Image</a>
                             </div>
                         </div>
                         <div class="portfolio-images">
-                            <img src="./assets/bulksmswork.png" class="img1">
-                            <img src="./assets/bulksmswork.png" class="img2">
+                            <img src="./assets/bulksmswork.png" class="w-100 port-img-hover">
                         </div>
                     </div>
-        
-                    <div class="portfolio-card portfolio-noteblue d-flex justify-content-between mt-5">
+
+                    <div class="portfolio-card d-flex justify-content-between mt-5" data-aos="fade-right">
                         <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
-                            <p class="color-noteblue fw-bold fs-5 text-spacemono">MOBILE APP DESIGN</p>
-                            <p class="text-spacemono color-lightgray fs-2 fw-bold">Notetaking App</p>
-                            <p class="color-textgray">UI Design for an Android Note-taking App for an academic project in Mobile Application Development</p>
+                            <p class="color-portfoliocard fw-bold fs-5 text-spacemono portfolio-project-type">MOBILE APP DESIGN</p>
+                            <p class="text-spacemono color-themetext fs-2 fw-bold">Notetaking App</p>
+                            <p class="color-themetext">UI Design for an Android Note-taking App for an academic project in Mobile Application Development.</p>
         
-                            <div class="d-flex flex-column flex-md-row">
-                                <a href="https://www.behance.net/gallery/173873463/NotaKo-Simple-Notetaking-App" target="_blank" class="button button-noteblue">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
+                            <div class="d-flex flex-column flex-md-row mt-3" id="cyberpunk-gallery">
+                                <a href="https://www.behance.net/gallery/173873463/NotaKo-Simple-Notetaking-App" target="_blank" class="button bg-themeportfoliobutton color-portfoliocard">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
                             </div>
                         </div>
                         <div class="portfolio-images">
-                            <img src="./assets/notework2.png" class="img1">
-                            <img src="./assets/notework1.png" class="img2">
+                            <img src="./assets/notework2.png" class="w-100 port-img-hover">
                         </div>
                     </div>
+
+                    <!-- <div class="portfolio-card d-flex justify-content-between mt-5" data-aos="fade-right">
+                        <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
+                            <p class="color-portfoliocard fw-bold fs-5 text-spacemono portfolio-project-type">FRONTEND DEVELOPMENT</p>
+                            <p class="text-spacemono color-themetext fs-2 fw-bold">E-Commerce Website</p>
+                            <p class="color-themetext">Capstone Project about building an e-commerce website for a local apparel store. Built with Angular, Bootstrap, and Laravel.</p>
+        
+                            <div class="d-flex flex-column flex-md-row mt-3" id="cyberpunk-gallery">
+                                <a href="https://www.behance.net/gallery/173873463/NotaKo-Simple-Notetaking-App" target="_blank" class="button bg-themeportfoliobutton color-portfoliocard">Behance <i class="bi bi-arrow-right-circle text-cyberpunk"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-images">
+                            <img src="./assets/notework2.png" class="w-100 port-img-hover">
+                        </div>
+                    </div> -->
                 </div>
 
             </div>
         </section>
         
-        <section id="about" class="px-3 z-3 pt-5 bg-lightgray position-relative">
+        <section id="about" class="pt-3 pb-5 z-3 pt-5 bg-thememain position-relative">
             <div class="container-lg py-5">
                 <div class="row d-flex flex-row align-items-center">
                     <div class="col-md">
@@ -195,56 +192,90 @@
                                 <p class="m-0 fs-5"><i class="fa-solid fa-mug-hot"></i></p>
                             </div>
                             -->
-                            <div class="about-mask position-absolute d-flex align-items-center justify-content-center" id="about-mask">
-                                <img src="./assets/personal-pic.png" >
+                            <div class="about-mask position-absolute d-flex align-items-center justify-content-center z-1" id="about-mask">
+                                <img src="./assets/gradpic_transparent.png">
                             </div>
-                            <div class="about-circle"></div>
+                            <div class="about-circle z-0"></div>
                         </div>
                     </div>
                     <div class="col-md about-info">
-                        <p class="color-primaryblue fs-2 fw-bold text-spacemono mt-5 mt-md-0 text-center text-md-start">I'm Wendell!</p>
-                        <p class="color-textlight">
-                            I am a Filipino aspiring Web and Mobile UI Designer. I have been the graphic designer of various school clubs in the past but I have always felt that Web Design and UI was my niche, so I started practicing and explored different ways to design interfaces and websites. I also develop websites (usually the ones I design) with Bootstrap, and if the website is big enough, Angular.
+                        <p class="color-themetext text-rubik text-uppercase fs-5 text-center text-md-start mt-5 mt-md-0">About Me</p>
+                        <p class="color-primaryblue fs-2 fw-bold text-spacemono mt-2 mt-md-0 text-center text-md-start">I'm Wendell!</p>
+                        <p class="color-themetext text-center text-md-start">
+                            I am a Filipino aspiring Web and Mobile UI Designer and Front-End Developer. I also just recently graduated with a Bachelor of Science in Information Technology from STI College - Dasmarinas, achieving a GWA of 1.15. Exploration and experimentations are two things that I love. If anything interests me, you can be sure that I'll know a few things about it.
                         </p>
-                        <p class="color-textlight">
-                            Outside of design and code, I love food and enjoy eating with friends and family. I play video games, mainly Tekken 7. 
+                        <p class="color-themetext text-center text-md-start">
+                            Outside of design and code, I love food and enjoy eating with friends and family. Tekken and League of Legends are my go-to during the weekends that I'm not doing anything.
                         </p> 
                         <div class="col mt-5 mt-xxl-0">
-                            <p class="text-spacemono color-primaryblue fs-3 fw-bold">
-                                Development
-                            </p>
-                            <div class="d-flex flex-row">
-                                <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="HTML">
-                                    <img src="./assets/html5.svg" draggable="false">
+                            <p class="color-themetext text-rubik text-uppercase fs-5 text-center text-md-start">Languages, Libraries, Frameworks</p>
+                            <div class="d-flex flex-row justify-content-center justify-content-md-start">
+                                <div class="about-card p-3 me-3 bg-thememaininvert" data-bs-toggle="tooltip" data-bs-title="Bootstrap">
+                                    <svg viewBox="0 0 48 39" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_24_150)">
+                                            <path d="M9.96956 0C7.23075 0 5.20453 2.40753 5.29519 5.01835C5.38209 7.52631 5.26912 10.7751 4.45463 13.424C3.63769 16.0811 2.25656 17.7607 0 17.9765V20.4235C2.25647 20.6393 3.63769 22.3189 4.45463 24.976C5.26912 27.6249 5.38209 30.8737 5.29509 33.3817C5.20453 35.9925 7.23075 38.4 9.96956 38.4H38.0339C40.7727 38.4 42.7989 35.9925 42.7084 33.3817C42.6214 30.8737 42.7343 27.6249 43.5487 24.976C44.3658 22.3189 45.7435 20.6393 48 20.4235V17.9765C45.7435 17.7607 44.3658 16.0811 43.5487 13.424C42.7343 10.7751 42.6214 7.52631 42.7084 5.01835C42.7989 2.40753 40.7727 0 38.0339 0H9.96956ZM32.147 23.6331C32.147 27.2281 29.475 29.4077 25.0409 29.4077H16.8657C16.816 29.4077 16.7683 29.3879 16.7331 29.3526C16.698 29.3173 16.6782 29.2694 16.6782 29.2195V9.17242C16.6782 9.1225 16.698 9.07462 16.7331 9.03932C16.7683 9.00402 16.816 8.98419 16.8657 8.98419H24.9976C28.695 8.98419 31.1215 10.994 31.1215 14.0795C31.1215 16.245 29.4894 18.184 27.4096 18.5237V18.6369C30.2405 18.9483 32.147 20.9157 32.147 23.6331ZM24.2176 11.5743H19.9135V17.6744H23.5387C26.3407 17.6744 27.8862 16.5422 27.8862 14.5182C27.8862 12.6216 26.5574 11.5743 24.2176 11.5743ZM19.9135 20.0948V26.8177H24.3765C27.294 26.8177 28.8395 25.6429 28.8395 23.435C28.8395 21.227 27.2507 20.0948 24.1887 20.0948H19.9135Z" fill="currentColor"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_24_150">
+                                                <rect width="48" height="38.4" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
                                 </div>
-                                <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="CSS">
-                                    <img src="./assets/css3.svg" draggable="false">
-                                </div>
-                                <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="Javascript">
-                                    <img src="./assets/javascript.svg" draggable="false">
-                                </div>
-                                <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="Bootstrap">
-                                    <img src="./assets/bootstrap.svg" draggable="false">
-                                </div>
-                                <div class="about-card p-3" data-bs-toggle="tooltip" data-bs-title="Angular">
-                                    <img src="./assets/angular.svg" draggable="false">
+                                <div class="about-card p-3 bg-thememaininvert" data-bs-toggle="tooltip" data-bs-title="Angular">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
+                                        <g>
+                                            <polygon fill="currentColor" points="108,135.4 125,135.4 125,135.4 125,135.4 142,135.4 125,94.5 	"/>
+                                            <path d="M125,30L125,30L125,30L31.9,63.2l14.2,123.1L125,230l0,0l0,0l78.9-43.7l14.2-123.1L125,30z M183.1,182.6h-21.7h0
+                                                l-11.7-29.2H125h0h0h-24.7l-11.7,29.2h0H66.9h0L125,52.1l0,0l0,0l0,0l0,0L183.1,182.6L183.1,182.6z" fill="currentColor"/>
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col">
-                                <p class="text-spacemono color-primaryblue fs-3 fw-bold">
-                                    Design
-                                </p>
-                                <div class="d-flex flex-row">
-                                    <div class="about-card p-3 me-3" data-bs-toggle="tooltip" data-bs-title="Figma">
-                                        <img src="./assets/figma.svg" draggable="false">
+                                <p class="color-themetext text-rubik text-uppercase fs-5 text-center text-md-start">Tools and Softwares</p>
+                                <div class="d-flex flex-row justify-content-center justify-content-md-start">
+                                    <div class="about-card p-3 me-3 bg-thememaininvert" data-bs-toggle="tooltip" data-bs-title="Figma">
+                                        <svg fill="currentColor" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M178.94238,94.00049A37.991,37.991,0,0,0,162,22.001H94A37.991,37.991,0,0,0,77.05762,94.00049,37.97671,37.97671,0,0,0,77.05811,162,37.99416,37.99416,0,1,0,132,195.99951V151.28223a37.98414,37.98414,0,1,0,46.94238-57.28174ZM192,60.001a30.03343,30.03343,0,0,1-29.98047,29.99951L162,90l-.03857.001L132,90V30.001h30A30.03406,30.03406,0,0,1,192,60.001ZM138.71729,98.00024A38.32407,38.32407,0,0,0,132,104.71777V98.00012ZM64,60.001a30.03406,30.03406,0,0,1,30-30h30V90H94l-.019.00049A30.03392,30.03392,0,0,1,64,60.001ZM94,225.999A29.99951,29.99951,0,1,1,94,166l30-.00085v30.00036A30.03364,30.03364,0,0,1,94,225.999Zm30-68L94,158a29.99976,29.99976,0,0,1-.019-59.99951L94,98.001l30-.00086ZM162,158a29.99952,29.99952,0,0,1-.03857-59.999H162l.019-.00049A29.99976,29.99976,0,0,1,162,158Z"/>
+                                        </svg>
                                     </div>
-                                    <div class="about-card p-3 me-3 ai-card" data-bs-toggle="tooltip" data-bs-title="Adobe Illustrator">
-                                        <img src="./assets/adobe-illustrator.svg" draggable="false">
+                                    <div class="about-card p-3 me-3 ai-card bg-thememaininvert" data-bs-toggle="tooltip" data-bs-title="Adobe Illustrator">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                                            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                            fill="currentColor" stroke="none">
+                                                <path d="M4432 4660 c-96 -25 -164 -63 -229 -128 -94 -94 -136 -203 -136 -357
+                                                0 -153 32 -240 129 -344 195 -211 569 -212 782 -3 191 187 187 507 -8 702 -33
+                                                33 -85 72 -117 88 -122 61 -285 77 -421 42z"/>
+                                                <path d="M1244 4510 c-12 -5 -27 -24 -33 -42 -80 -255 -1211 -3970 -1211
+                                                -3981 0 -7 8 -21 18 -30 17 -15 66 -17 504 -17 449 0 486 1 500 18 9 9 71 215
+                                                138 457 67 242 128 464 136 493 l15 52 526 -2 526 -3 149 -495 c91 -301 156
+                                                -500 166 -508 12 -9 131 -12 517 -12 493 0 502 0 520 20 17 19 18 26 7 66 -18
+                                                65 -1211 3914 -1224 3947 -6 15 -19 32 -29 37 -22 13 -1195 12 -1225 0z m657
+                                                -1235 c36 -133 284 -991 296 -1022 4 -10 -72 -13 -362 -13 -307 0 -366 2 -362
+                                                14 22 58 247 886 287 1057 28 117 53 225 56 239 5 20 10 10 26 -50 10 -41 37
+                                                -142 59 -225z"/>
+                                                <path d="M4112 3414 l-22 -15 0 -1469 c0 -1442 0 -1469 19 -1480 13 -6 183
+                                                -10 484 -10 437 0 465 1 480 18 16 17 17 134 17 1480 l0 1461 -22 15 c-20 14
+                                                -82 16 -478 16 -396 0 -458 -2 -478 -16z"/>
+                                            </g>
+                                        </svg>
                                     </div>
-                                    <div class="about-card p-3" data-bs-toggle="tooltip" data-bs-title="Adobe Photoshop">
-                                        <img src="./assets/photoshop.svg" draggable="false">
+                                    <div class="about-card p-3 me-3 bg-thememaininvert" data-bs-toggle="tooltip" data-bs-title="Adobe Photoshop">
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096.000000 4096.000000" preserveAspectRatio="xMidYMid meet">
+
+                                            <g transform="translate(0.000000,4096.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                                                <path d="M12740 29689 c-1093 -9 -1669 -25 -2275 -65 -194 -13 -255 -21 -315 -40 -88 -27 -167 -80 -192 -126 -17 -31 -18 -480 -18 -9020 0 -6444 3 -9001 11 -9038 13 -61 47 -104 97 -122 30 -10 295 -13 1382 -13 l1345 0 41 22 c29 16 48 36 63 66 l21 43 0 3241 0 3241 928 5 c952 5 1056 8 1492 52 1730 176 3173 790 4155 1770 828 826 1336 1898 1509 3186 52 387 61 539 61 1054 -1 570 -18 802 -91 1240 -170 1012 -534 1843 -1121 2555 -109 132 -436 460 -568 569 -968 801 -2222 1244 -3850 1361 -419 30 -932 33 -2675 19z m2208 -2659 c501 -36 938 -128 1317 -277 965 -381 1546 -1100 1735 -2147 70 -393 80 -945 24 -1391 -91 -725 -362 -1322 -799 -1761 -219 -220 -438 -378 -725 -523 -464-235 -974 -368 -1631 -426 -379 -33 -1544 -53 -1841 -31 l-108 8 0 3253 0 3253 123 6 c101 5 628 28 902 39 194 8 874 6 1003 -3z"/>
+                                                <path d="M27310 25080 c-518 -12 -822 -42 -1205 -116 -1644 -319 -2838 -1329 -3250 -2749 -200 -691 -203 -1528 -9 -2240 180 -656 550 -1234 1114 -1739 491 -439 1060 -806 1915 -1233 458 -230 1065 -584 1395 -816 520 -365 759 -668 826 -1047 22 -126 28 -301 15 -420 -71 -651 -538 -1034 -1401 -1145 -267 -35 -735 -30 -1100 11 -939 106 -1883 438 -2648 930 -110 72 -156 94 -190 94 -35 0 -78 -37 -89 -77 -4 -15 -8 -624 -8 -1353 0 -1258 1 -1327 18 -1372 31 -79 64 -99 399 -243 728 -314 1475 -498 2318 -572 230 -20 958 -22 1255 -4 1194 74 2176 398 2928 968 658 498 1108 1178 1317 1988 164 635 183 1432 50 2082 -194 945 -748 1711 -1740 2404 -405 283 -774 496 -1393 805 -410 205 -460 231 -722 379 -589 334 -945 583 -1200 840 -290 293 -398 542 -382 890 26 597 522 1038 1292 1149 249 36 705 47 1031 25 832 -56 1620 -286 2369 -693 43 -24 59 -27 117 -24 54 3 72 8 94 28 56 52 54 -13 54 1318 1 1222 0 1230 -20 1285 -23 60 -95 149 -140 172 -54 28 -478 165 -665 215 -784 209 -1433 281 -2345 260z"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="about-card p-3 bg-thememaininvert" data-bs-toggle="tooltip" data-bs-title="GitHub">
+                                        <svg viewBox="0 0 96 96">
+                                            <path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/>
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
@@ -256,20 +287,14 @@
             </div>
         </section>
 
-        <section id="cta" class="p-5 bg-lightgray position-relative z-3">
-            <div class="p-5 bg-textdark container-lg rounded-2 text-center d-flex flex-column align-items-center">
-                <p class="color-lightgray text-spacemono fs-2 fw-bold">Let's Work Together!</p>
-                <p class="color-lightgray">Need a website design? Need a website developed? <br>Hit me with an email and let's have a chat!</p>
-                <a href="mailto:wendellravago@gmail.com" class="button button-blue mt-3 cta-button">Email</a>
-            </div>
-        </section>
-        <section id="footer" class="p-3 bg-textgray position-relative z-3">
+        <section id="footer" class="p-3 bg-thememaininvert position-relative z-3">
             <div class="container-lg d-flex flex-column align-items-center">
                 <div class="d-flex justify-content-center mb-2">
-                    <a href="https://www.behance.net/wendellravago" class="text-decoration-none text-reset color-textdark me-3"><i class="bi bi-behance fs-5"></i></a>
-                    <a href="https://www.linkedin.com/in/wendell-ravago/" class="text-decoration-none text-reset color-textdark"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a href="https://www.behance.net/wendellravago" class="text-decoration-none text-reset color-textdark me-3"><i class="bi bi-behance fs-5 color-thememain"></i></a>
+                    <a href="https://www.linkedin.com/in/wendell-ravago/" class="text-decoration-none text-reset color-textdark me-3"><i class="bi bi-linkedin fs-5 color-thememain"></i></a>
+                    <a href="mailto:wendellravago@gmail.com" class="text-decoration-none text-reset color-textlight"><i class="bi bi-envelope-fill fs-5 color-thememain"></i></a>
                 </div>
-                <p class="m-0">Copyright © 2024 Wendell Ravago. All rights reserved.</p>
+                <p class="m-0 color-thememain">Copyright © 2024 Wendell Ravago. All rights reserved.</p>
             </div>
         </section>
     </main>

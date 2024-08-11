@@ -1,12 +1,16 @@
+// AOS
+
+AOS.init();
+
 window.addEventListener('scroll', () => {
     let navbar = document.querySelector('.navbar');
     let scrollPosition = document.documentElement.scrollTop;
 
     if(scrollPosition > 0){
-        navbar.classList.add('bg-textdark');
+        navbar.classList.add('bg-thememain');
     }
     else {
-        navbar.classList.remove('bg-textdark');
+        navbar.classList.remove('bg-thememain');
     }
 })
 
@@ -28,3 +32,34 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(document.getElementById('about-mask'));
 
 // load galleries
+
+// hero image 
+
+let heroCount = 0
+let divbg = document.getElementById('hero-img-container')
+
+setInterval(() => {
+    if(heroCount < 2){
+        heroCount++
+    }
+    else {
+        heroCount = 0
+    }
+
+    switch(heroCount){
+        case 0:
+            divbg.style.backgroundColor = "#3888FF"
+            break;
+        case 1:
+            divbg.style.backgroundColor = "#38ff59"
+            break;
+        case 2:
+            divbg.style.backgroundColor = "#ff5338"
+            break;
+    }
+
+}, 3000);
+
+function changeHero() {
+    
+}

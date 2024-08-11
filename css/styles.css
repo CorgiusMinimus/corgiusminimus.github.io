@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 @keyframes move-down {
     0% {
@@ -15,12 +16,18 @@
 }
 
 :root {
-    --primaryblue: #3888FF;
+
+    --primaryblue: #0077B6;
     --lightgray: #EEEEEE;
     --textgray: #C5C5C5;
     --hoverblue: #1C77FF;
     --textdark: #252525;
     --textlight: #4E4E4E;
+    --darkblue: #333333;
+    --primarybluergb: 0, 119, 182;
+    --lightgrayrgb: 238, 238, 238;
+
+    /* Portfolio Colors */
     --cyberpunkred: #df4a3b;
     --cyberpunkredhover: #E22E1C;
     --smsgreen: #51BDD1;
@@ -28,6 +35,29 @@
     --noteblue: #007BFF;
     --notebluehover: #0063CD;
     --darkgray: #181818;
+
+    /* Default */
+    --themeprimary: var(--primaryblue);
+    --thememain: var(--lightgray);
+    --themetext: var(--textdark);
+    --thememaingray: var(--textgray);
+    --themetextgray: var(--textlight);
+    --themeprimarybg: var(--primaryblue);
+    --themeportfoliocards: var(--lightgray);
+    --themeportfoliocardsrgb: var(--lightgrayrgb);
+    --themeportfoliobutton: var(--primaryblue);
+}
+
+#theme-toggle:checked ~ .site-content, #theme-toggle:checked ~ .navbar {
+    --themeprimary: var(--primaryblue);
+    --thememain: var(--textdark);
+    --themetext: var(--lightgray);
+    --thememaingray: var(--textlight);
+    --themetextgray: var(--textgray);
+    --themeprimarybg: var(--darkblue);
+    --themeportfoliocards: var(--primaryblue);
+    --themeportfoliocardsrgb: var(--primarybluergb);
+    --themeportfoliobutton: var(--lightgray);
 }
 
 .body-set {
@@ -37,10 +67,58 @@
 body {
     font-family: 'Rubik';
     color: var(--textdark);
+    --thememain: var(--lightgray);
+    transition: background-color .4s ease-in-out, color .4s ease-in-out;
 }
 
-.navbar {
-    transition: background-color .4s ease-in-out;
+body:has(#theme-toggle:checked){
+    --thememain: var(--textdark);
+}
+
+/* Theming */
+
+.bg-thememain {
+    background-color: var(--thememain);
+}
+
+.bg-themeprimarybg {
+    background-color: var(--themeprimarybg)
+}
+
+.bg-themeportfoliocards {
+    background-color: var(--themeportfoliocards)
+}
+
+.bg-themeportfoliobutton {
+    background-color: var(--themeportfoliobutton) 
+}
+
+.bg-thememaininvert {
+    background-color: var(--themetext);
+}
+
+.color-themetext {
+    color: var(--themetext) 
+}
+
+.color-thememaingray {
+    color: var(--thememaingray)
+}
+
+.color-themetextgray {
+    color: var(--themetextgray)
+}
+
+.color-thememain {
+    color: var(--thememain)
+}
+
+.color-portfoliocard {
+    color: var(--themeportfoliocards) !important;
+}
+
+.bg-primaryblue {
+    background-color: var(--primaryblue);
 }
 
 .bg-lightgray {
@@ -107,6 +185,10 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+.text-fredoka {
+    font-family: 'Fredoka', sans-serif;
+}
+
 .height-inherit {
     height: inherit;
 }
@@ -135,8 +217,13 @@ body {
     color: var(--primaryblue)
 }
 
-.site-content {
+.site-content * {
     position: relative;
+    transition: background-color .4s ease-in-out, color .4s ease-in-out;
+}
+
+.navbar * {
+    transition: background-color .4s ease-in-out, color .4s ease-in-out;
 }
 
 #hero {
@@ -166,10 +253,6 @@ body {
     position: sticky;
     top: 5%;
 }
-
-.portfolio-container {
-}
-
 
 .button {
     display: block;
@@ -259,8 +342,6 @@ body {
     border-color: var(--noteblue);
 }
 
-
-
 .service-card {
     background-color: var(--lightgray);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -281,27 +362,32 @@ body {
     max-width: 40rem;
 }
 
-
-
 .portfolio-card {
-    background-color: var(--darkgray);
+    background-color: var(--themeportfoliocards);
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    max-height: 384px;
+    max-height: 338px;
     transition: all .4s;
     box-shadow: none;
 }
 
 .portfolio-card-content {
-    background: linear-gradient(90deg, rgba(24,24,24,1) 25%, 75%, rgba(24, 24, 24, 0));
-    max-width: 30rem;
+    background: linear-gradient(90deg, var(--themeportfoliocards) 25%, 90%, rgba(var(--themeportfoliocardsrgb), 0));
+    max-width: 40rem;
     z-index: 3;
+}
+
+.portfolio-project-type {
+    background-color: var(--themetext);
+    padding: .25em .5em;
+    border-radius: 15px;
 }
 
 .portfolio-images {
     position: relative;
     z-index: 1;
+    width: 50%;
 }
 
 .bi-arrow-right-circle::before {
@@ -312,103 +398,6 @@ body {
     transform: rotate(330deg);
 }
 
-.portfolio-cyberpunk .img1 {
-    transform: rotate(-15deg);
-    position:absolute;
-    top: 0;
-    right: 10px;
-    transition: all 2s ease-in-out;
-    transform-origin: top left;
-}
-
-.portfolio-cyberpunk .img2 {
-    transform: rotate(-15deg);
-    position:absolute;
-    bottom: -150px;
-    right: 625px;
-    transition: all 2s ease-in-out;
-    transform-origin: top left;
-}
-
-.portfolio-cyberpunk:hover .img1 {
-    transform: rotate(-15deg) translate(0, -60%);
-}
-
-.portfolio-cyberpunk:hover .img2  {
-    transform: rotate(-15deg) translate(0, 60%);
-}
-
-.portfolio-cyberpunk:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 25px rgba(223, 74, 59, 0.75);
-}
-
-.portfolio-smsgreen .img1 {
-    transform: rotate(-15deg);
-    position:absolute;
-    top: 0;
-    right: 4px;
-    transition: all 2s ease-in-out;
-    transform-origin: top left;
-}
-
-.portfolio-smsgreen .img2 {
-    transform: rotate(-15deg);
-    position:absolute;
-    bottom: -120px;
-    right: 480px;
-    transition: all 2s ease-in-out;
-    transform-origin: top left;
-}
-
-.portfolio-smsgreen:hover .img1 {
-    transform: rotate(-15deg) translate(0, -30%);
-}
-
-.portfolio-smsgreen:hover .img2  {
-    transform: rotate(-15deg) translate(0, 30%);
-}
-
-.portfolio-smsgreen:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 25px rgba(81, 189, 209, 0.75);
-}
-
-.portfolio-noteblue .img1 {
-    transform: rotate(-15deg);
-    position:absolute;
-    top: 0;
-    right: 4px;
-    transition: all 2s ease-in-out;
-    transform-origin: top left;
-}
-
-.portfolio-noteblue .img2 {
-    transform: rotate(-15deg);
-    position:absolute;
-    bottom: -125px;
-    right: 460px;
-    transition: all 2s ease-in-out;
-    transform-origin: top left;
-}
-
-.portfolio-noteblue:hover .img1 {
-    transform: rotate(-15deg) translate(0, -25%);
-}
-
-.portfolio-noteblue:hover .img2  {
-    transform: rotate(-15deg) translate(0, 25%);
-}
-
-.portfolio-noteblue:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 25px rgba(0, 123, 255, 0.75);
-}
-
-#about {
-    
-}
-
 .about-card {
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -416,7 +405,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: box-shadow .4s ease-in-out;
+    transition: box-shadow .4s ease-in-out, background-color .4s ease-in-out;
 }
 
 .about-card img {
@@ -431,7 +420,17 @@ body {
 }
 
 .about-card:hover img{
-    filter: invert(39%) sepia(87%) saturate(1879%) hue-rotate(203deg) brightness(104%) contrast(101%);;
+    filter: brightness(0) saturate(100%)  invert(23%) sepia(94%) saturate(1791%) hue-rotate(179deg) brightness(106%) contrast(106%);
+}
+
+.about-card svg {
+    color: var(--thememain);
+    transition: .4s color ease-in-out;
+}
+
+.about-card:hover svg {
+    color: var(--primaryblue);
+    transition: .4s color ease-in-out;
 }
 
 .about-card:hover {
@@ -468,87 +467,16 @@ body {
     z-index: 6;
 }
 
+.portfolio-images img {
+    transition: all 1s ease-in-out
+}
+
+.portfolio-card:hover .port-img-hover {
+    transform: translateY(-10%);
+}
+
 .about-circle:hover {
     background: linear-gradient(180deg, #181818 0%, #3888FF 100%);
-}
-
-.about-orbiter {
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-    width: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow .4s ease-in-out, color .4s ease-in-out;
-    background-color: dodgerblue;
-    z-index: 4;
-    left: 15vw;
-    top: 9vw;
-}
-
-.about-orbiter:hover {
-    animation-play-state: paused;
-    color:white;
-}
-
-.orbiter-1 {
-    box-shadow: none;
-    background: linear-gradient(to right, #f12711, #f5af19);
-    animation: orbit1 10s infinite;
-    animation-timing-function: linear;
-    transition: all .4s ease-in-out;
-}
-
-.orbiter-1:hover {
-    box-shadow: 0px 0px 25px rgba(241, 39, 17, 0.75);
-    transform: scale(1.05);
-}
-
-.orbiter-1:hover .about-orbiter {
-    box-shadow: 0px 0px 25px rgba(241, 39, 17, 0.75);
-    transform: scale(1.05);
-    animation-play-state: paused;
-}
-
-
-.orbiter-2 {
-    animation: orbit2 10s infinite;
-    animation-timing-function: linear;
-    box-shadow: none;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-}
-
-.orbiter-2:hover {
-    color:white;
-    box-shadow: 0px 0px 25px rgba(142, 45, 226, 0.75);
-    transform: scale(1.05);
-}
-
-.orbiter-3 {
-    animation: orbit3 10s infinite;
-    animation-timing-function: linear;
-    box-shadow: none;
-    background: linear-gradient(to right, #11998e, #38ef7d);
-}
-
-.orbiter-3:hover {
-    color:white;
-    box-shadow: 0px 0px 25px rgba(17, 153, 142, 0.75);
-    transform: scale(1.05);
-}
-
-.orbiter-4 {
-    animation: orbit4 10s infinite;
-    animation-timing-function: linear;
-    box-shadow: none;
-    background: linear-gradient(to right, #d1913c, #ffd194);
-}
-
-.orbiter-4:hover {
-    color:white;
-    box-shadow: 0px 0px 25px rgba(209, 145, 60, 0.75);
-    transform: scale(1.05);
 }
 
 .about-info {
@@ -560,10 +488,69 @@ body {
     width: 350px
 }
 
+.hero-img-container {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-color: #3888FF;
+    border-radius: 20px;
+    transition: background-color .4s ease-in-out
+}
+
+#hero-img-div {
+    background: url('../assets/sparklepattern.png');
+    background-repeat: repeat;
+    border-radius: 20px;
+    width: 100%;
+    animation: movebg 60s infinite linear;
+    background-size: 10%;
+    transition: background-size .4s ease-in-out
+}
+
+#hero-img-div img {
+    height: inherit;
+    transition: scale .4s ease-in-out, filter .4s ease-in-out;
+    filter: drop-shadow(2px 2px 2px #222) saturate(10%);
+}
+
+#hero-img-div img:hover {
+    scale: 1.1;
+    filter: drop-shadow(8px 8px 5px #222) saturate(100%);
+}
+
+#hero-img-div:has(img:hover) {
+    background-size: 36px;
+}
+
+.hero-img-shadow-mask {
+    height: inherit;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 11px 10px 51px -7px rgba(0,0,0,0.61) inset;
+    -webkit-box-shadow: 11px 10px 51px -7px rgba(0,0,0,0.61) inset;
+    -moz-box-shadow: 11px 10px 51px -7px rgba(0,0,0,0.61) inset;
+    z-index: 2;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.debug-border {
+    border: 1px solid red;
+}
+
 
 @media screen and (max-width: 576px){
     #hero {
         height: 100vh;
+    }
+
+    .hero-img-container {
+        width: 100%;
+        height: 300px;
+        margin: 0 1em;
     }
 }
 
@@ -580,6 +567,16 @@ body {
         max-height: unset;
         height: auto;
     }
+
+    .hero-img-container {
+        width: 400px;
+        height: 300px;
+    }
+
+    .portfolio-images {
+        width: 100%;
+        position: absolute;
+    }
 }
 
 /* Animations */
@@ -593,38 +590,13 @@ body {
     }
 }
 
-@keyframes orbit1 {
+@keyframes movebg {
     0% {
-        transform: rotate(0deg) translateX(12vw) rotate(0deg);
+        background-position: 0 0;
     }
     100% {
-        transform: rotate(360deg) translateX(12vw) rotate(-360deg);
+        background-position:  -100vw 0;
     }
-}
 
-@keyframes orbit2 {
-    0% {
-        transform: rotate(0deg) translateY(12vw) rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) translateY(12vw) rotate(-360deg);
-    }
-}
-
-@keyframes orbit3 {
-    0% {
-        transform: rotate(0deg) translateY(-12vw) rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) translateY(-12vw) rotate(-360deg);
-    }
-}
-
-@keyframes orbit4 {
-    0% {
-        transform: rotate(0deg) translateX(-12vw) rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) translateX(-12vw) rotate(-360deg);
-    }
+    
 }
