@@ -24,18 +24,18 @@
 <body class="bg-thememain">
     <input id="theme-toggle" type="checkbox" class="d-none">
     <nav class="navbar navbar-dark sticky-top navbar-expand-lg px-3">
-        <div class="container-lg color-themetext d-flex flex-row justify-content-between">
+        <div class="container-lg px-0 color-themetext d-flex flex-row justify-content-between">
 
             <a class="navbar-brand text-spacemono fw-bold color-themetext">WR</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navlinksOffCanvas">
-                <span class="navbar-toggler-icon color-textlight"></span>
+                <span class="navbar-toggler-icon color-themetext"></span>
             </button>
 
-            <div id="navlinksOffCanvas" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1">
+            <div id="navlinksOffCanvas" class="offcanvas offcanvas-end bg-thememain color-themetext" tabindex="-1">
                 <div class="offcanvas-header">
                     <p class="fw-bold fs-3 m-0">Wendell Ravago</p>
-                    <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                    <a class="text-reset text-decoration-none color-themetext" data-bs-dismiss="offcanvas"><i class="bi bi-x-lg"></i></a>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end align-items-center flex-grow-1 me-3">
@@ -51,27 +51,26 @@
     </nav>
     <main class="site-content">
         <section id="hero" class="px-3 bg-thememain">
-
-            <div class="container-lg mx-auto height-inherit d-flex align-items-center justify-content-center position-fixed hero-div-fixed">
-                <div class="z-1 d-flex flex-column align-items-center justify-content-center  py-5">
-                    <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start mt-5 mt-md-0">
-                        <div class="d-flex flex-column justify-content-center align-items-center align-items-md-start order-md-2 order-2">
-                            <p class="text-spacemono fs-1 color-themetext fw-bold hero-text mt-3 mt-md-0">Hello!👋</p>
+            <div class="container-lg px-3 mx-0 mx-md-auto height-inherit d-flex align-items-center justify-content-center position-fixed hero-div-fixed">
+                <div class="z-1 d-flex flex-column align-items-center justify-content-center py-5 overflow-hidden">
+                    <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start mt-5 mt-md-0 mw-100">
+                        <div class="d-flex flex-column justify-content-center align-items-center align-items-md-start order-md-2 order-2 ">
+                            <p class="text-spacemono fs-1 color-themetext fw-bold hero-text mt-3 mt-md-0 text-center text-md-start">Hello!👋</p>
         
-                            <p class="text-spacemono fs-1 color-themetext  fw-bold hero-text">I'm <span class="color-primaryblue">Wendell Lance</span>!</p>
+                            <p class="text-spacemono fs-2 fs-md-1 color-themetext fw-bold hero-text text-center text-md-start">I'm <span class="color-primaryblue">Wendell Lance</span>!</p>
         
                             <p class="text-rubik color-themetextgray hero-subtext m-0 text-center text-md-start">Aspiring UI/UX Designer and Front-End Developer on the lookout to improve my craft! I enjoy experimenting with stuff to see what works and what doesn't. </p>
         
-                            <p class="text-rubik color-themetextgray hero-subtext">Oh, I also love food and playing video games!</p>
+                            <p class="text-rubik color-themetextgray hero-subtext text-center text-md-start">Oh, I also love food and playing video games!</p>
                             
-                            <div class="d-flex flex-row">
-                                <a href="/assets/files/Ravago-Resume.pdf" target="_blank" class="text-rubik button button-blue mt-3 mb-5">Get Resume</a>
-                                <a href="#portfolio" class="text-rubik button-outline mt-3 mb-5 ms-3">Learn More</a>
+                            <div class="d-flex flex-column flex-md-row">
+                                <a href="/assets/files/Ravago-Resume.pdf" target="_blank" class="text-rubik button button-blue mt-3 mb-2 mb-md-5">Get Resume</a>
+                                <a href="#portfolio" class="text-rubik button-outline mt-0 mt-md-3 mb-3 mb-md-5 ms-0 ms-md-3">Learn More</a>
                                 
                             </div>
 
                             
-                            <div class="w-100">
+                            <div class="w-100 mb-5 mb-md-0">
                                 <p class="text-uppercase text-rubik color-themetextgray text-center text-md-start">You may also reach me on:</p>
                                 <div class="d-flex mb-2 justify-content-center justify-content-md-start">
                                     <a href="https://www.behance.net/wendellravago" class="text-decoration-none text-reset color-textlight me-5"><i class="bi bi-behance fs-4 color-themetextgray"></i></a>
@@ -93,7 +92,7 @@
 
 
                     
-                    <a href="#portfolio" class="mt-5 text-reset d-block"><i class="bi bi-arrow-down-circle d-block fs-1 color-themetextgray down-arrow"></i></a>
+                    <a href="#portfolio" class="mt-5 text-reset d-none d-md-block down-arrow-cta"><i class="bi bi-arrow-down-circle d-block fs-1 color-themetextgray down-arrow"></i></a>
                 </div>
                 <div id="particles-js" class=""></div>
             </div>
@@ -141,7 +140,7 @@
 
                     <div class="portfolio-card d-flex justify-content-between mt-5" data-aos="fade-right">
                         <div class="portfolio-card-content d-flex flex-column align-items-center align-items-md-start p-5">
-                            <p class="color-portfoliocard fw-bold fs-5 text-spacemono portfolio-project-type">MOBILE APP DESIGN</p>
+                            <p class="color-portfoliocard fw-bold fs-5 text-spacemono portfolio-project-type">APP DESIGN</p>
                             <p class="text-spacemono color-themetext fs-2 fw-bold">Notetaking App</p>
                             <p class="color-themetext">UI Design for an Android Note-taking App for an academic project in Mobile Application Development.</p>
         
@@ -173,29 +172,18 @@
             </div>
         </section>
         
-        <section id="about" class="pt-3 pb-5 z-3 pt-5 bg-thememain position-relative">
-            <div class="container-lg py-5">
+        <section id="about" class="pb-5 z-3 pt-0 pt-md-5 bg-thememain position-relative">
+            <div class="container-lg py-2 py-md-5">
                 <div class="row d-flex flex-row align-items-center">
                     <div class="col-md">
-                        <div class="position-relative d-flex justify-content-center about-img-div" id="about-img-div">
-                            <!--
-                            <div class="position-absolute about-orbiter orbiter-1 p-3 d-none d-xxl-block" data-bs-toggle="tooltip" data-bs-title="Pizza is my favorite food!">
-                                <p class="m-0 fs-5"><i class="fa-solid fa-pizza-slice"></i></p>
-                            </div>
-                            <div class="position-absolute about-orbiter orbiter-2 p-3 d-none d-xxl-block" data-bs-toggle="tooltip" data-bs-title="I am a dog person!">
-                                <p class="m-0 fs-5"><i class="fa-solid fa-dog"></i></p>
-                            </div>
-                            <div class="position-absolute about-orbiter orbiter-3 p-3 d-none d-xxl-block" data-bs-toggle="tooltip" data-bs-title="My favorite bands are Arctic Monkeys, twenty one pilots, and Siames! ">
-                                <p class="m-0 fs-5"><i class="fa-solid fa-music"></i></p>
-                            </div>
-                            <div class="position-absolute about-orbiter orbiter-4 p-3 d-none d-xxl-block" data-bs-toggle="tooltip" data-bs-title="Coffee runs in my veins.">
-                                <p class="m-0 fs-5"><i class="fa-solid fa-mug-hot"></i></p>
-                            </div>
-                            -->
-                            <div class="about-mask position-absolute d-flex align-items-center justify-content-center z-1" id="about-mask">
+                        <div class="position-relative d-flex justify-content-center about-img-div mw-100" id="about-img-div">
+                            <div class="about-mask position-absolute d-none d-md-flex align-items-center justify-content-center z-1" id="about-mask">
                                 <img src="./assets/gradpic_transparent.png">
                             </div>
-                            <div class="about-circle z-0"></div>
+                            <div class="about-circle z-0 d-none d-md-block"></div>
+                            <div class="about-circle about-circle-mobile z-0 d-flex d-md-none justify-content-center align-items-center">
+                                <img src="./assets/gradpic_transparent.png" class="mt-5">
+                            </div>
                         </div>
                     </div>
                     <div class="col-md about-info">
@@ -294,7 +282,7 @@
                     <a href="https://www.linkedin.com/in/wendell-ravago/" class="text-decoration-none text-reset color-textdark me-3"><i class="bi bi-linkedin fs-5 color-thememain"></i></a>
                     <a href="mailto:wendellravago@gmail.com" class="text-decoration-none text-reset color-textlight"><i class="bi bi-envelope-fill fs-5 color-thememain"></i></a>
                 </div>
-                <p class="m-0 color-thememain">Copyright © 2024 Wendell Ravago. All rights reserved.</p>
+                <p class="m-0 color-thememain text-center">Copyright © 2024 Wendell Ravago. All rights reserved.</p>
             </div>
         </section>
     </main>
