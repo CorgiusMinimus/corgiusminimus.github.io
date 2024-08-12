@@ -36,8 +36,8 @@
     --noteblue: #007BFF;
     --notebluehover: #0063CD;
     --darkgray: #181818;
-    --darkgraysemi: #181818AA;
-    --lightgraysemi: #EEEEEEAA;
+    --darkgraysemi: #181818DD;
+    --lightgraysemi: #EEEEEEDD;
 
     /* Default */
     --themeprimary: var(--primaryblue);
@@ -239,7 +239,7 @@ body:has(#theme-toggle:checked){
 }
 
 .navbar * {
-    transition: background-color .4s ease-in-out, color .4s ease-in-out;
+    transition: background-color .4s ease-in-out, color .4s ease-in-out, all .4s ease-in-out;
 }
 
 #hero {
@@ -250,6 +250,7 @@ body:has(#theme-toggle:checked){
     left:0;
     right: 0;
     margin: auto;
+    position: fixed;
 }
 
 .hero-text {
@@ -561,6 +562,15 @@ body:has(#theme-toggle:checked){
 
 
 @media screen and (max-width: 768px){
+
+    #hero {
+        height: auto
+    }
+
+    .hero-div-fixed {
+        position: relative;
+    }
+
     .portfolio-card-content {
         background: var(--themeportfoliocardbg);
         max-width: unset;
@@ -583,6 +593,63 @@ body:has(#theme-toggle:checked){
         width: 100%;
         position: absolute;
     }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-subtext {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-img-container {
+        width: 70%;
+        height: 350px;
+        margin: 0;
+    }
+    
+    .hero-img-shadow-mask {
+        width: 100%;
+    }
+
+    .about-img-div {
+        overflow-y: hidden;
+    }
+
+    .about-mask {
+        width: 100%;
+    }
+
+    .about-mask img {
+        width: 100%;
+    }
+
+    .about-circle {
+        height: 100%;
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .about-circle img {
+        transform: translateY(50%);
+        width: 100%;
+    }
+
+    .about-circle-mobile {
+        height: 0;
+        padding-bottom: 60%;
+        width: 60%;
+    }
+
+    .about-mask {
+        mask: radial-gradient(ellipse at top, rgb(0, 0, 0) 30%, rgba(0,0,0,0) 75%)
+    }
+
+    .about-img-div {
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (max-width: 576px){
@@ -592,7 +659,7 @@ body:has(#theme-toggle:checked){
     }
 
     #hero {
-        height: 100vh;
+        height: auto;
     }
 
     .hero-text {
